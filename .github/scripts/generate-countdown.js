@@ -28,7 +28,7 @@ if (timeDifference <= 0) {
 
 const badge = {
   schemaVersion: 1,
-  label: "Countdown",
+  label: "Countdown till CampusCup 2025",
   message: message,
   color: color,
 };

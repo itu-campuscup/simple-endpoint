@@ -6,6 +6,11 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,10 +26,14 @@ jobs:
       - name: Generate countdown file
         run: node .github/scripts/generate-countdown.js
 
+      - name: Create publish directory
+        run: |
+          mkdir -p publish
+          cp countdown.json publish/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: publish
           keep_files: false
-          include_only: countdown.json

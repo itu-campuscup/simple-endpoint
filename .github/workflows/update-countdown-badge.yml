@@ -2,7 +2,6 @@ name: Update Countdown Badge
 
 on:
   schedule:
-    # Run every day at midnight UTC
     - cron: "0 0 * * *"
   workflow_dispatch:
 
@@ -24,16 +23,19 @@ jobs:
           node-version: "20"
 
       - name: Generate countdown file
-        run: node .github/scripts/generate-countdown.js
-
-      - name: Create publish directory
         run: |
-          mkdir -p publish
-          cp countdown.json publish/
+          node .github/scripts/generate-countdown.js
+          mkdir -p _site
+          cp countdown.json _site/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: publish
-          keep_files: false
+        id: deployment
+        uses: actions/deploy-pages@v4

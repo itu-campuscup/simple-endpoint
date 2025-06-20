@@ -2,8 +2,8 @@ name: Update Countdown Badge
 
 on:
   schedule:
-    # Minute 0 past every 4 hours
-    - cron: "0 */4 * * *"
+    # UTC 11:01 CEST 13:01
+    - cron: "2 11 * * *"
   workflow_dispatch:
 
 permissions:

@@ -20,6 +20,9 @@ if (timeDifference <= 0) {
   } else if (days === 1) {
     message = "1 day";
     color = "#e05d44"; // Red for urgent
+  } else if (days > 0) {
+    message = "Has been held";
+    color = "#224186"; // CC Blue
   } else {
     message = "<24h";
     color = "#e05d44"; // Red for very urgent

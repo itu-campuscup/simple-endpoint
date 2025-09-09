@@ -10,7 +10,7 @@ if (timeDifference <= 0) {
   message = "Event started!";
   color = "#4c1"; // Green for completed event
 } else {
-  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const days = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
   if (days > 7) {
     message = `${days} days`;
     color = "#4c1"; // Green for plenty of time

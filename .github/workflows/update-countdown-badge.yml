@@ -24,6 +24,7 @@ jobs:
       - name: Generate and commit countdown file
         run: |
           node .github/scripts/generate-countdown-2025.js
+          node .github/scripts/generate-countdown-2026.js
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add countdown-2025.json

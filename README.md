@@ -18,7 +18,7 @@ You use it like this:
 
 Example:
 
-[![Countdown](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/itu-campuscup/simple-endpoint/main/countdown.json)](https://campuscup.dk)
+[![Countdown](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/itu-campuscup/simple-endpoint/main/countdown-2025.json)](https://campuscup.dk)
 
 <details><summary>More Details</summary>
   <h4>Badge States</h4>
@@ -30,7 +30,7 @@ Example:
   </ul>
   <h4>Data Source</h4>
   <ul>
-    <li><strong>Endpoint</strong>: <a href="https://raw.githubusercontent.com/itu-campuscup/simple-endpoint/main/countdown.json" target="_blank"> countdown.json </a></li>
+    <li><strong>Endpoint</strong>: <a href="https://raw.githubusercontent.com/itu-campuscup/simple-endpoint/main/countdown-2025.json" target="_blank"> countdown-2025.json </a></li>
     <li><strong>Format</strong>: <a href="https://shields.io/endpoint" target="_blank"> Shields.io Endpoint Format </a></li>
     <li><strong>Updates</strong>: 11:02 UTC via GitHub Actions </li>
   </ul>

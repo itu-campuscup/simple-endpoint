@@ -6,24 +6,22 @@ let timeDifference = eventDate - now;
 let message;
 let color;
 
-if (timeDifference <= 0) {
-  message = "Event started!";
+const days = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+if (days > 7) {
+  message = `${days} days`;
+  color = "#4c1"; // Green for plenty of time
+} else if (days > 1) {
+  message = `${days} days`;
+  color = "#fe7d37"; // Orange for soon
+} else if (days === 1) {
+  message = "< 24h";
+  color = "#e05d44"; // Red for urgent
+} else if (days == 0) {
+  message = "Event Started!";
   color = "#4c1"; // Green for completed event
-} else {
-  const days = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-  if (days > 7) {
-    message = `${days} days`;
-    color = "#4c1"; // Green for plenty of time
-  } else if (days > 1) {
-    message = `${days} days`;
-    color = "#fe7d37"; // Orange for soon
-  } else if (days === 1) {
-    message = "< 24h";
-    color = "#e05d44"; // Red for urgent
-  } else if (days > 0) {
-    message = "Has been held";
-    color = "#224186"; // CC Blue
-  }
+} else if (days > 0) {
+  message = "Has been held";
+  color = "#224186"; // CC Blue
 }
 
 const badge = {

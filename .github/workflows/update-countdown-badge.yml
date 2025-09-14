@@ -27,11 +27,14 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add countdown-2025.json
+          git add countdown-2026.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Update countdown: $(date)"
             git push
           fi
-      - name: Show countdown.json after generation
-        run: cat countdown.json
+      - name: Show countdown-2025.json after generation
+        run: cat countdown-2025.json
+      - name: Show countdown-2026.json after generation
+        run: cat countdown-2026.json

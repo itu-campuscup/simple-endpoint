@@ -13,7 +13,7 @@ A dynamic badge that shows the countdown to CampusCup 2025.
 You use it like this:
 
 ```markdown
-[![Countdown](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/itu-campuscup/simple-endpoint/main/countdown.json)](https://campuscup.dk)
+[![Countdown](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/itu-campuscup/simple-endpoint/main/countdown-2025.json)](https://campuscup.dk)
 ```
 
 Example:

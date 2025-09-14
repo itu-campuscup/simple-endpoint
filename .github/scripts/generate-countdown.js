@@ -19,7 +19,7 @@ if (days > 7) {
 } else if (days == 0) {
   message = "Event Started!";
   color = "#4c1"; // Green for completed event
-} else if (days > 0) {
+} else {
   message = "Has been held";
   color = "#224186"; // CC Blue
 }

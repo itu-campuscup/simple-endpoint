@@ -31,4 +31,4 @@ const badge = {
   color: color,
 };
 
-fs.writeFileSync("countdown.json", JSON.stringify(badge, null, 2), "utf8");
+fs.writeFileSync("countdown-2025.json", JSON.stringify(badge, null, 2), "utf8");

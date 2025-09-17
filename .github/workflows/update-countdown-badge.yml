@@ -27,8 +27,7 @@ jobs:
           node .github/scripts/generate-countdown-2026.js
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add countdown-2025.json
-          git add countdown-2026.json
+          git add .
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
